@@ -14,23 +14,21 @@ import com.example.gridapp.ui.theme.AppButton
 import com.example.gridapp.ui.theme.AppTextField
 import com.example.gridapp.ui.theme.AppTitle
 
-// 9. Manages state and logic [cite: 23]
 @Composable
 fun InsertRowsScreen(navController: NavController) {
-    // 9. Holds the screen state [cite: 22]
+
     var rows by remember { mutableStateOf("") }
 
     InsertRowsScreenContent(
         rows = rows,
         onRowsChange = { rows = it },
         onNavigate = {
-            // 5. Navigate when button is clicked
+            // Navigate when button is clicked
             navController.navigate("insertColumns/$rows")
         }
     )
 }
 
-// 9. Holds the screen content [cite: 23]
 @Composable
 fun InsertRowsScreenContent(
     rows: String,
@@ -38,17 +36,17 @@ fun InsertRowsScreenContent(
     onNavigate: () -> Unit
 ) {
     Column(modifier = Modifier.padding(16.dp)) {
-        // 4. Has a title
+        // title
         AppTitle(text = "Insert Rows")
 
-        // 4. Has a text field
+        // text field
         AppTextField(
             value = rows,
             onValueChange = onRowsChange,
             label = "Number of Rows"
         )
 
-        // 4. Has a button
+        // button
         AppButton(
             text = "Next",
             onClick = onNavigate

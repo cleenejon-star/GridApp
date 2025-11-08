@@ -19,14 +19,14 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // 15. Modify setContent to call the navigation function
+
         setContent {
             GridAppTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    // 15. Invoke the function created
+
                     MyAppNavigation()
                 }
             }
@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-// 14. Function that sets up navigation
+
 @Composable
 fun MyAppNavigation() {
     val navController = rememberNavController()

@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -16,7 +15,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-// 4. Composable for titles [cite: 17]
+
 @Composable
 fun AppTitle(text: String) {
     Text(
@@ -27,7 +26,7 @@ fun AppTitle(text: String) {
     )
 }
 
-// 5. Composable for text fields [cite: 18]
+
 @Composable
 fun AppTextField(
     value: String,
@@ -44,7 +43,7 @@ fun AppTextField(
     )
 }
 
-// 7. Composable for buttons [cite: 20]
+
 @Composable
 fun AppButton(
     text: String,
@@ -60,7 +59,7 @@ fun AppButton(
     }
 }
 
-// 6. Composable for grid items [cite: 19]
+
 @Composable
 fun GridItem(text: String) {
     Text(
