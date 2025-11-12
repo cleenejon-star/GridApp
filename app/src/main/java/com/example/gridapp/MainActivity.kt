@@ -40,12 +40,12 @@ fun MyAppNavigation() {
     val navController = rememberNavController()
 
     NavHost(navController = navController, startDestination = "insertRows") {
-        // Route for InsertRowsScreen
+        // InsertRowsScreen
         composable("insertRows") {
             InsertRowsScreen(navController = navController)
         }
 
-        // Route for InsertColumnsScreen
+        // InsertColumnsScreen
         composable(
             route = "insertColumns/{rows}",
             arguments = listOf(navArgument("rows") { type = NavType.StringType })
@@ -56,7 +56,7 @@ fun MyAppNavigation() {
             )
         }
 
-        // Route for GridScreen
+        // GridScreen
         composable(
             route = "gridScreen/{rows}/{cols}",
             arguments = listOf(
