@@ -23,7 +23,7 @@ fun InsertRowsScreen(navController: NavController) {
         rows = rows,
         onRowsChange = { rows = it },
         onNavigate = {
-            // Navigate when button is clicked
+            // navigate when button is clicked
             navController.navigate("insertColumns/$rows")
         }
     )
@@ -36,17 +36,17 @@ fun InsertRowsScreenContent(
     onNavigate: () -> Unit
 ) {
     Column(modifier = Modifier.padding(16.dp)) {
-        // title
+        // Title
         AppTitle(text = "Insert Rows")
 
-        // text field
+        // Text field
         AppTextField(
             value = rows,
             onValueChange = onRowsChange,
             label = "Number of Rows"
         )
 
-        // button
+        // Button
         AppButton(
             text = "Next",
             onClick = onNavigate
